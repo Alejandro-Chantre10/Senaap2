@@ -2,7 +2,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h2>LISTA DE MEDICOS</h2>
+    <h2>LISTA DE USUARIOS</h2>
 @stop
 
 @section('content')
@@ -12,47 +12,33 @@
         </div>
     @endif
     <div class="card-header">
-        @can('medico.create')
-            <a href="{{ route('medico.create') }}" class="btn btn-success">Nuevo medico</a>
-        @endcan
-        <a href="{{ route('admin/medico.pdf') }}" class="btn btn-primary">PDF</a>
+        <a href="{{ route('user.create') }}" class="btn btn-success">Nuevo user</a>
     </div>
     <div class="card">
         <div class="card-body">
-            <table id="medico" class="table table-striped shadow-lg mt-4">
+            <table id="user" class="table table-striped shadow-lg mt-4">
                 <thead class="bg-info text-bold">
                     <tr>
                         <th>ID</th>
                         <th>NOMBRE</th>
-                        <th>APELLIDOS</th>
-                        <th>EDAD</th>
-                        <th>ESPECIALIDAD</th>
-                        <th>APRENDIZ</th>
+                        <th>EMAIL</th>
                         <th>ACCIONES</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($medicos as $medico)
+                    @foreach ($users as $user)
                         <tr>
-                            <td>{{ $medico->id }}</td>
-                            <td>{{ $medico->nombre }}</td>
-                            <td>{{ $medico->apellido }}</td>
-                            <td>{{ $medico->edad }}</td>
-                            <td>{{ $medico->especialidad }}</td>
-                            <td>{{ $medico->aprendiz->nombre }}</td>
+                            <td>{{ $user->id }}</td>
+                            <td>{{ $user->name}}</td>
+                            <td>{{ $user->email }}</td>
 
                             <td width="200px">
-                                @can('medico.destroy')
-                                    <form action="{{ route('medico.destroy', $medico) }}" method="POST">
-
-                                    @can('medico.edit')
-                                        <a href="{{ route('medico.edit', $medico) }}" class="btn btn-info">Editar</a>
-                                    @endcan
+                                <form action="{{ route('user.destroy', $user) }}" method="POST">
+                                    <a href="{{ route('user.edit', $user) }}" class="btn btn-info">Editar</a>
                                     @method('delete')
                                     @csrf
                                     <input type="submit" value="Eliminar" class="btn btn-danger">
                                 </form>
-                                @endcan
                             </td>
                         </tr>
                     @endforeach
@@ -71,10 +57,10 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
     <script src="
-                https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
+            https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#medico').DataTable({
+            $('#user').DataTable({
                 "language": {
                     "search": "Buscar",
                     "lengthMenu": "Mostrar _MENU_ registros por página",

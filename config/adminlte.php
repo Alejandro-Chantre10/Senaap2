@@ -238,23 +238,29 @@ return [
 
         ['header' => 'Panel de Administrador'],
 
-        ['header' => 'Usuarios'],
+        [
+            'text' => 'Usuarios',
+            'route'  => 'user.index',
+            'icon' => 'fas fa-solid fa-users',
+        ],
+
+        ['header' => 'Tipo de Personas'],
         [
             'text' => 'Aprendices',
-             'route'  => 'aprendiz.index',
+            'route'  => 'aprendiz.index',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
             'text' => 'Medicos',
             'route'  => 'medico.index',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-solid fa-hospital-user',
         ],
-        ['header' => 'Acciones'],
+        ['header' => 'Controles'],
 
         [
-            'text' => 'Controles',
+            'text' => 'Calendario',
             'route'  => 'evento.index',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-duotone fa-calendar',
         ],
     ],
 
