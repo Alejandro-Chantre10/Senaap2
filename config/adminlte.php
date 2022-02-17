@@ -242,6 +242,24 @@ return [
             'text' => 'Usuarios',
             'route'  => 'user.index',
             'icon' => 'fas fa-solid fa-users',
+
+        ],
+
+        ['header' => 'Datos de usuarios'],
+        [
+            'text' => 'Enfermedades',
+            'url' => '',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'Datos Medicos',
+            'url' => '',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'Datos Personales',
+            'url' => '',
+            'icon' => 'fas fa-fw fa-user',
         ],
 
         ['header' => 'Tipo de Personas'],
