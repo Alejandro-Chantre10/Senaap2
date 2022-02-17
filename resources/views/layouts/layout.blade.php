@@ -7,16 +7,18 @@
 @stop
 
 @section('content')
-   <div class="main">
-    <h1 class="text-center">Bienvenido de vuelta Admin!!</h1>
-   </div>
+
+<body classbackground="/image/fondo.jpg">
+    <div class="main">
+        <h1 class="text-center">Bienvenido de vuelta {{ Auth::user()->name }}</h1>
+    </div>
+
+</body>
 @stop
 
 @section('css')
+<link rel="stylesheet" href="css\style.css">
 <style type="text/css">
-    .main{
-
-    }
 </style>
 
 @stop

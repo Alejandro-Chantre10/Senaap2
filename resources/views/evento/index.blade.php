@@ -92,4 +92,5 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    
 @endsection
