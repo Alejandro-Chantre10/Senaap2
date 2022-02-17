@@ -19,7 +19,7 @@ class CreateDoctorsTable extends Migration
             $table->string("apellido");
             $table->integer("edad");
             $table->string("especialidad");
-            $table->unsignedBigInteger("aprendiz_id")->unique();
+            $table->unsignedBigInteger("aprendiz_id");
             $table->foreign('aprendiz_id')->references("id")->on("apprentices")->onUpdate("cascade")->onDelete("cascade");
             $table->timestamps();
         });
