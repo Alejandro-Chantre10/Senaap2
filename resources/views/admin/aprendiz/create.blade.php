@@ -11,7 +11,7 @@
             <strong>{{ session('mensaje') }}</strong>
         </div>
     @endif
-    <div class="card fondo1 text" style="background-color: #010611e1;">
+    <div class="card fondo1" style="background-color: #010611e1;">
         <div class="card-body">
             {!! Form::open(['route' => 'aprendiz.store']) !!}
             <div class="form-group">

@@ -11,7 +11,7 @@
             <strong>{{ session('mensaje') }}</strong>
         </div>
     @endif
-    <div class="card" style="background-color: #010611e1;">
+    <div class="card fondo1" style="background-color: #010611e1;">
         <div class="card-body">
             {!! Form::model($user, ['route' => ['user.update', $user], 'method' => 'put']) !!}
             <div class="form-group">
@@ -55,6 +55,7 @@
     </div>
 @stop
 @section('css')
+<link href="{{ asset('css/style.css') }}" rel="stylesheet">
 <style>
 #boton{
     background-color: #0A2A55;

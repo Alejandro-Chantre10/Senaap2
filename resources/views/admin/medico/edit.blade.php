@@ -12,7 +12,7 @@
         </div>
 
     @endif
-    <div class="card"  style="background-color: #010611e1;">
+    <div class="card fondo1"  style="background-color: #010611e1;">
         <div class="card-body">
             {!! Form::model($medico, ['route' => ['medico.update', $medico], 'method' => 'put']) !!}
             <div class="form-group">
@@ -61,6 +61,7 @@
 
 @stop
 @section('css')
+<link href="{{ asset('css/style.css') }}" rel="stylesheet">
 <style>
 #boton{
     background-color: #0A2A55;
