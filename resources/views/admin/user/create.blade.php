@@ -12,7 +12,7 @@
 </div>
 
 @endif
-<div class="card"  style="background-color: #010611e1;">
+<div class="card fondo1"  style="background-color: #010611e1; padding-bottom: 100px;">
     <div class="card-body">
     {!! Form::open(['route'=>'user.store']) !!}
         <div class="form-group">
@@ -44,6 +44,7 @@
 @stop
 
 @section('css')
+<link href="{{ asset('css/style.css') }}" rel="stylesheet">
 <style>
 #boton{
     background-color: #0A2A55;

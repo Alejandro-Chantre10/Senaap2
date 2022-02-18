@@ -11,7 +11,7 @@
             <strong>{{ session('mensaje') }}</strong>
         </div>
     @endif
-    <div class="card" style="background-color: #010611e1;">
+    <div class="card fondo1 text" style="background-color: #010611e1;">
         <div class="card-body">
             {!! Form::open(['route' => 'aprendiz.store']) !!}
             <div class="form-group">
@@ -65,13 +65,19 @@
 
 @stop
 @section('css')
+<link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <style>
+
         #boton {
             background-color: #0A2A55;
         }
 
         .form-control {
             width: 500px;
+        }
+
+        .card-body{
+            display:flex;
         }
 
     </style>
