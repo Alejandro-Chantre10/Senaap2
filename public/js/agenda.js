@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
             right: "dayGridMonth, timeGridWeek, listWeek",
         },
 
-        events: "http://127.0.0.1:8000/evento/mostrar", //Mirar datos deñ calendario
+        events: "http://127.0.0.1:8000/evento/mostrar", //Mirar datos del calendario
 
         dateClick: function(info) {
             formulario.reset();

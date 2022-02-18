@@ -2,7 +2,7 @@
 @section('title', 'Nuevo Medico')
 
 @section('content_header')
-    <h1>Crear nuevo Médico</h1>
+    <h1>Nuevo Médico</h1>
 @stop
 
 @section('content')
@@ -10,9 +10,8 @@
         <div class="alert alert-success">
             <strong>{{ session('mensaje') }}</strong>
         </div>
-
     @endif
-    <div class="card">
+    <div class="card" style="background-color: #010611e1;">
         <div class="card-body">
             {!! Form::open(['route' => 'medico.store']) !!}
             <div class="form-group">
@@ -53,9 +52,21 @@
                 @enderror
             </div>
 
-            {!! Form::submit('Guardar medico') !!}
+            {!! Form::submit('Guardar médico', ['class' => 'btn btn-info', 'id' => 'boton']) !!}
             {!! Form::close() !!}
         </div>
     </div>
 
 @stop
+@section('css')
+    <style>
+        #boton {
+            background-color: #0A2A55;
+        }
+
+        .form-control {
+            width: 500px;
+        }
+
+    </style>
+@endsection

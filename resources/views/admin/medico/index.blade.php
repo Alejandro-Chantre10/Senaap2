@@ -14,7 +14,7 @@
     <div class="card-header">
         <div>
             @can('medico.create')
-                <a href="{{ route('medico.create') }}" class="btn btn-success">Nuevo medico</a>
+                <a href="{{ route('medico.create') }}"class="btn btn-info" style="background-color: #0A2A55;">Nuevo medico</a>
             @endcan
         </div>
         <div class="button">
@@ -24,10 +24,10 @@
         </div>
     </div>
 
-    <div class="card">
+    <div class="card"  style="background-color: #010611e1;">
         <div class="card-body">
-            <table id="medico" class="table table-striped shadow-lg mt-4">
-                <thead class="bg-info text-bold">
+            <table id="medico" class="table table-dark shadow-lg mt-4">
+                <thead class="text-bold"  style="background-color: #0A2A55;">
                     <tr>
                         <th>ID</th>
                         <th>NOMBRE</th>

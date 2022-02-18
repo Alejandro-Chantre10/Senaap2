@@ -12,7 +12,7 @@
         </div>
 
     @endif
-    <div class="card">
+    <div class="card"style="background-color: #010611e1;">
         <div class="card-body">
             {!! Form::model($aprendiz, ['route' => ['aprendiz.update', $aprendiz], 'method' => 'put']) !!}
             <div class="form-group">
@@ -58,9 +58,20 @@
                 @enderror
             </div>
 
-            {!! Form::submit('Guardar Aprendiz') !!}
+            {!! Form::submit('Guardar aprendiz',['class' =>'btn btn-info','id'=>'boton']) !!}
             {!! Form::close() !!}
         </div>
     </div>
 
 @stop
+@section('css')
+<style>
+#boton{
+    background-color: #0A2A55;
+}
+
+.form-control{
+ width: 500px;
+}
+</style>
+@endsection

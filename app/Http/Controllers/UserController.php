@@ -39,7 +39,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $user = User::create($request->all());
-        return redirect()->route('user.create',$user);
+        return redirect()->route('user.create',$user)->with('mensaje','El usuario ha sido creado satisfactoriamente');
     }
 
     /**
@@ -76,7 +76,7 @@ class UserController extends Controller
     {
         $user->update($request->all());
         $user->roles()->sync($request->roles);
-        return redirect()->route('user.edit',$user)->with('mensaje','Se asigno un rol');
+        return redirect()->route('user.edit',$user)->with('mensaje','Se asigno un rol al usuario');
     }
 
     /**
@@ -88,6 +88,6 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         $user->delete();
-        return redirect()->route('user.index');
+        return redirect()->route('user.index')->with('mensaje','El Usuario ha sido eliminado satisfactoriamente');;
     }
 }

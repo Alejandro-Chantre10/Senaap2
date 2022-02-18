@@ -14,7 +14,7 @@ class Evento extends Model
         'descripcion'=>'required',
         'start'=>'required',
         'end'=>'required',
-        'id_apprentice'=>'required',
+        'id_aprendiz'=>'required',
         'id_medico'=>'required',
     ];
 

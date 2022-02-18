@@ -7,10 +7,6 @@
         </div>
         <div id="agenda"></div>
     </div>
-    <!-- Button trigger modal -->
-    {{-- <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#evento">
-        Launch
-    </button> --}}
 
     <!-- Modal -->
     <div class="modal fade" id="evento" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
@@ -22,39 +18,39 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body container">
                     {!! Form::open() !!}
                     <div class="form-group">
                         {!! Form::label('id', 'ID') !!}
-                        {!! Form::text('id', null, ['class' => 'form-control', 'palceholder' => 'Nombre del id_medico']) !!}
+                        {!! Form::text('id', null, ['class' => 'form-control']) !!}
                         @error('id')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="form-group">
                         {!! Form::label('title', 'Titulo') !!}
-                        {!! Form::text('title', null, ['class' => 'form-control', 'palceholder' => 'Nombre del id_medico']) !!}
+                        {!! Form::text('title', null, ['class' => 'form-control']) !!}
                         @error('title')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="form-group">
                         {!! Form::label('descripcion', 'Descripción') !!}
-                        {!! Form::textarea('descripcion', null, ['class' => 'form-control', 'palceholder' => 'Nombre del id_medico']) !!}
+                        {!! Form::textarea('descripcion', null, ['class' => 'form-control']) !!}
                         @error('descripcion')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="form-group">
                         {!! Form::label('start', 'Incio') !!}
-                        {!! Form::date('start', null, ['class' => 'form-control', 'palceholder' => 'Nombre del id_medico']) !!}
+                        {!! Form::date('start', null, ['class' => 'form-control']) !!}
                         @error('start')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="form-group">
                         {!! Form::label('end', 'Fin') !!}
-                        {!! Form::date('end', null, ['class' => 'form-control', 'palceholder' => 'Nombre del id_medico']) !!}
+                        {!! Form::date('end', null, ['class' => 'form-control']) !!}
                         @error('end')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
@@ -92,5 +88,5 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-    
+
 @endsection

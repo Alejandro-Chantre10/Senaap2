@@ -12,7 +12,7 @@
 </div>
 
 @endif
-<div class="card">
+<div class="card"  style="background-color: #010611e1;">
     <div class="card-body">
     {!! Form::open(['route'=>'user.store']) !!}
         <div class="form-group">
@@ -36,9 +36,21 @@
             <span class="text-danger">{{ $message }}</span>
             @enderror
         </div>
-        {!! Form::submit('Guardar usuario') !!}
+        {!! Form::submit('Guardar usuario',['class' =>'btn btn-info','id'=>'boton']) !!}
     {!! Form::close() !!}
     </div>
-</div>
 
+</div>
 @stop
+
+@section('css')
+<style>
+#boton{
+    background-color: #0A2A55;
+}
+
+.form-control{
+ width: 500px;
+}
+</style>
+@endsection

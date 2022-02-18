@@ -12,12 +12,12 @@
         </div>
     @endif
     <div class="card-header">
-        <a href="{{ route('user.create') }}" class="btn btn-success">Nuevo user</a>
+        <a href="{{ route('user.create') }}" class="btn btn-info" style="background-color: #0A2A55;">Nuevo user</a>
     </div>
-    <div class="card">
+    <div class="card"  style="background-color: #010611e1;">
         <div class="card-body">
-            <table id="user" class="table table-striped shadow-lg mt-4">
-                <thead class="bg-info text-bold">
+            <table id="user" class="table table-dark shadow-lg mt-4">
+                <thead class="text-bold"  style="background-color: #0A2A55;">
                     <tr>
                         <th>ID</th>
                         <th>NOMBRE</th>

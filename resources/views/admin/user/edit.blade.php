@@ -2,7 +2,7 @@
 @section('title', 'Nuevo Usuario')
 
 @section('content_header')
-    <h1>Nuevo Usuario</h1>
+    <h1>Editar Usuario</h1>
 @stop
 
 @section('content')
@@ -11,7 +11,7 @@
             <strong>{{ session('mensaje') }}</strong>
         </div>
     @endif
-    <div class="card">
+    <div class="card" style="background-color: #010611e1;">
         <div class="card-body">
             {!! Form::model($user, ['route' => ['user.update', $user], 'method' => 'put']) !!}
             <div class="form-group">
@@ -49,9 +49,19 @@
                 <span class="text-danger">{{ $message }}</span>
             @enderror
         </div>
-        {!! Form::submit('Guardar usuario') !!}
+        {!! Form::submit('Guardar usuario',['class' =>'btn btn-info','id'=>'boton']) !!}
         {!! Form::close() !!}
     </div>
     </div>
-
 @stop
+@section('css')
+<style>
+#boton{
+    background-color: #0A2A55;
+}
+
+.form-control{
+ width: 500px;
+}
+</style>
+@endsection
